@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculator Container */
+.calculator {
+    width: 340px;
+    padding: 20px;
+    background-color: #1e293b;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid #334155;
+}
+
+/* Display Screen */
+.display {
+    height: 110px;
+    background-color: #0f172a;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    border: 1px solid #334155;
+}
+
+.previous {
+    color: #94a3b8;
+    font-size: 18px;
+    min-height: 25px;
+}
+
+.current {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* General Buttons */
+button {
+    height: 60px;
+    border: none;
+    border-radius: 14px;
+    background-color: #334155;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Operator Buttons */
+.operator {
+    background-color: #0ea5e9;
+    color: white;
+}
+
+/* Clear Buttons */
+.clear {
+    background-color: #64748b;
+    color: white;
+}
+
+/* Equal Button */
+.equal {
+    background-color: #22c55e;
+    grid-row: span 2;
+    height: auto;
+}
+
+/* Zero Button */
+.zero {
+    grid-column: span 2;
+}
+
+/* Button Hover Effects */
+button:hover {
+    filter: brightness(1.2);
+}
+
+/* Button Click Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        height: 55px;
+    }
+}
